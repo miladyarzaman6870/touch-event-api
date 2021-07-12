@@ -16,14 +16,12 @@ class EventApiCallApplicationTests {
     ObjectMapper mapper;
     @Test
     void contextLoads() throws JsonProcessingException {
-        String s="sss";
-        s.concat("aa");
-        System.out.println(s+"//////////////////");
+        System.out.println("//////////////////");
         InputModel inputModel=new InputModel();
-//        inputModel.setUrl("");
-//        inputModel.setToken("sfdfg");
-//        inputModel.setBody("");
-//        String s = mapper.writeValueAsString(inputModel);
-//        eventConsumer.listen(s);
+        inputModel.setUrl("hhgjhjhj");
+        inputModel.setToken("sfdfg");
+        inputModel.setBody("bhjghjghjg");
+        String s = mapper.writeValueAsString(inputModel);
+        eventConsumer.onRecive(s);
     }
 }

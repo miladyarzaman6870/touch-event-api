@@ -1,12 +1,7 @@
 package com.behsa.omni.eventapicall.domain;
 
-import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotNull;
-
-@Component
 public class ResponseModel {
-    @NotNull(message = "responseBody can not null.")
     private String responseBody;
     private String responseDesc;
     private String responseType;
@@ -32,5 +27,15 @@ public class ResponseModel {
 
     public void setResponseType(String responseType) {
         this.responseType = responseType;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
