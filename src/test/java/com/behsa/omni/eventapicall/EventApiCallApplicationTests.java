@@ -69,6 +69,7 @@ class EventApiCallApplicationTests {
          Thread.sleep(5000);
          Assertions.assertEquals("0",responseModelfromfinalConsumer.getResponseType());
          Assertions.assertEquals(responseModelfromfinalConsumer.getResponseBody(),rndStringBody);
+         Assertions.assertEquals("0",loggerModelFromLoggerConsumer.getResponseType());
     }
     @RabbitListener(queues = "${queueName2}")
     public void onRecive(String inputMsg) throws IOException {
