@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.behsa.omni</groupId>
-    <artifactId>event-api-call</artifactId>
+    <artifactId>touch-event-api-call</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>event-api-call</name>
+    <name>touch-event-api-call</name>
     <description>this service get input from rabbitMq madule and call api. input message from rabbitMq contains this
         data: url and token and body. this data used for call api
     </description>
@@ -36,11 +36,6 @@
             <version>3.10.4</version>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.behsa.usdp</groupId>-->
-<!--            <artifactId>common-localization</artifactId>-->
-<!--            <version>1.0.1</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
