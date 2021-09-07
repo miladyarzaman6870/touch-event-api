@@ -28,22 +28,18 @@ public class ApiClient {
                     HttpMethod.POST,
                     httpRequest,
                     ResponseModel.class);
-            System.out.println("////////1");
             LOGGER.debug("Call: Get new top-up token web service: response {}", respEntity.getBody());
             if (respEntity.getBody() == null) {
                 throw new EventApiCallException("error in call ApiCallClient","2011");
             }
         } catch (HttpClientErrorException e) {
-            System.out.println("////////3");
             if (e.getStatusCode() != HttpStatus.UNAUTHORIZED) {
                 throw new EventApiCallException("error in call ApiCallClient.(UNAUTHORIZED)","2012", e);
             }
             throw new EventApiCallException("error in call ApiCallClient.","2018", e);
         } catch (HttpServerErrorException e) {
-            System.out.println("////////5");
             throw new EventApiCallException("error in call ApiCallClient.(httpServerException)", "2013",e);
         }catch (Exception e){
-            System.out.println("////////6");
             throw new EventApiCallException("error in call ApiCallClient.", "2014",e);
         }
         return respEntity.getBody();
