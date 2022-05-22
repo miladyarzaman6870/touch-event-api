@@ -8,7 +8,7 @@ RUN apt-get update -y -o "Acquire::https::Verify-Peer=false"
 RUN apt-get install bash  -y -o "Acquire::https::Verify-Peer=false"
 
 ENV _JAVA_OPTIONS="-Xmx512m -Xms256m"
-ENV SPRING_PROFILES_ACTIVE= prod
+ENV SPRING_PROFILES_ACTIVE=prod
  
  EXPOSE 8082
  COPY . .
