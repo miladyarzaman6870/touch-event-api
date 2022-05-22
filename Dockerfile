@@ -26,4 +26,4 @@ RUN apt-get install bash  -y -o "Acquire::https::Verify-Peer=false"
  #ENV    SERVER_PORT=80
  
  COPY . .
- CMD	java -jar target/omni-bss-1.0.0.jar
+ CMD	java -jar target/touch-event-api-call-0.0.1-SNAPSHOT.jar
