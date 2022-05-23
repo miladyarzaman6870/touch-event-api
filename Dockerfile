@@ -11,5 +11,5 @@ ENV _JAVA_OPTIONS="-Xmx512m -Xms256m"
 ENV SPRING_PROFILES_ACTIVE=prod
  
  EXPOSE 8082
- COPY . .
- CMD	java -jar target/touch-event-api-call-0.0.1-SNAPSHOT.jar
+ COPY target/touch-event-api-call-0.0.1-SNAPSHOT.jar .
+ CMD	java -jar touch-event-api-call-0.0.1-SNAPSHOT.jar
