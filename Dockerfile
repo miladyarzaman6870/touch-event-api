@@ -9,6 +9,7 @@ RUN apt-get install bash  -y -o "Acquire::https::Verify-Peer=false"
 
 ENV _JAVA_OPTIONS="-Xmx512m -Xms256m"
 ENV SPRING_PROFILES_ACTIVE=prod
+ENV queueDurable=true
  
  EXPOSE 8082
  COPY target/touch-event-api-call-0.0.1-SNAPSHOT.jar .
