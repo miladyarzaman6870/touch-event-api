@@ -12,5 +12,8 @@ ENV SPRING_PROFILES_ACTIVE=prod
 ENV queueDurable=true
  
  EXPOSE 8082
+ COPY application.properties .
+ COPY application-prod.properties .
+ COPY application-dev.properties .
  COPY target/touch-event-api-call-0.0.1-SNAPSHOT.jar .
  CMD	java -jar touch-event-api-call-0.0.1-SNAPSHOT.jar
