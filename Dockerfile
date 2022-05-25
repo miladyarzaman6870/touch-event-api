@@ -11,7 +11,8 @@ ENV _JAVA_OPTIONS="-Xmx512m -Xms256m"
 ENV SPRING_PROFILES_ACTIVE=prod
 ENV queueDurable=true
  
- EXPOSE 8082
+
+EXPOSE 8082
  COPY application.properties .
  COPY application-prod.properties .
  COPY application-dev.properties .
